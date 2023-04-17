@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        thead, tbody {
+  border: 1px solid black;
+}
+
+tfoot {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Kode brg</td>
+                <td>Jumlah</td>
+                <td>Harga</td>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td>m001</td>
+                <td>2</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>m002</td>
+                <td>3</td>
+                <td>3000</td>
+            </tr>
+            <tr>
+                <td>m003</td>
+                <td>6</td>
+                <td>6000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td><label id="jumlah">0</label></td>
+                <td> <label id="total">0</label></td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+       $(document).ready(function(){
+            var total = 0;
+            var jumlah = 0;
+            $('#tbody tr').each(function(){
+                var currentRow=$(this);
+                total=  total   +   Number(currentRow.find("td:eq(2)").text());
+                console.log("hello");
+            });
+            $('#tbody tr').each(function(){
+                var currentRow=$(this);
+                jumlah =  jumlah   +   Number(currentRow.find("td:eq(1)").text());
+                console.log("hello");
+            });
+            console.log(total);
+            console.log(jumlah);
+            $("#jumlah").text(jumlah);
+            $("#total").text(total);
+        }); 
+    </script>
+</body>
+</html>

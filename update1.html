@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>  
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid red;
+  background-color: #d3d7d6;
+  color: white;
+  outline: none; 
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+select {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-bottom: 2px solid red;
+  background-color: #d3d7d6;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #aa0404;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+    <h1>Master karyawan</h1>
+    <form action="index1.html" target="_blank" method="post" autocomplete="on">
+    <label for="kode">kode:</label><br>
+    <input type="text" id="kode" name="kode" placeholder="1234"><br>
+    <label for="nama">nama:</label><br>
+    <input type="text" id="nama" name="nama" placeholder="Adi"><br>
+    <label for="jabatan">jabatan:</label><br>
+    <select name="jabatan" id="jabatan">
+        <option value="admin">admin</option>
+        <option value="operator">operator</option>
+    <option value="supervisor">supervisor</option>
+</select><br>
+<label for="telp">telp:</label><br>
+<input type="text" id="telp" name="telp" placeholder="0812323231">
+<br>
+<label for="email">email:</label><br>
+<input type="text" id="email" name="email" placeholder="adi@gmail.com"><br>
+<label for="password">password:</label><br>
+<input type="text" id="password" name="password" placeholder="1234"><br><br>
+<input type="submit" name="save" id="save" value="ubah">
+<input type="submit" name="cancel" id="cancel" value="Batal">
+</body>
+</html>
