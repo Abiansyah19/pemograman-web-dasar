@@ -1,0 +1,343 @@
+<html>
+    <head>
+
+ <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <h2>Permintaan</h2>
+            <button class="tambah btn btn-success" >Tambah</button>
+        </nav>
+            
+            <div id="ganti">
+    <table border="1" width="100%" height="100%" class="tables" id="dataTable"><br>
+      <thead>
+        <tr class="bg bg-success">
+        <th>kode</th>
+        <th>tanggal</th>
+        <th style="width:70%">konsumen</th>
+        <th>karyawan</th>
+        <th>item</th>
+        <th>total</th>
+        <th>action</th>
+        </tr>
+</thead>
+<tbody  id="tbody">
+            <tr>
+                <td>M001</td>
+                <td>19-05-2003</td>
+                <td>abi</td>
+                <td>ani</td>
+                <td>3</td>
+                <td align="right">300</td>
+                <td align="right">
+                    <button class="view btn btn-success"data-bs-toggle="modal" id="view" data-bs-target="#myModal" >v</button>
+                </td>
+            </tr>
+            <tr>
+                <td>M002</td>
+                <td>19-05-2003</td>
+                <td>ali</td>
+                <td>budi</td>
+                <td>4</td>
+                <td align="right">400</td>
+                <td align="right"> 
+<button class="update1 btn btn-success"data-bs-toggle="modal" id="update1" data-bs-target="#myModal" >v</button>
+                </td> 
+            </tr>
+            <tr>
+                <td>M003</td>
+                <td>19-05-2003</td>
+                <td>aki</td>
+                <td>jaka</td>
+                <td>3</td>
+                <td align="right">300</td>
+                <td align="right">
+                 <button class="update1 btn btn-success"data-bs-toggle="modal" id="update1" data-bs-target="#myModal" >v</button>   
+                </td> 
+            </tr>
+            <tr>
+                <td>M004</td>
+                <td>19-05-2003</td>
+                <td>ani</td>
+                <td>ani</td>
+                <td>3</td>
+                <td align="right">300</td>
+                <td align="right">
+<button class="update1 btn btn-success"data-bs-toggle="modal" id="update1" data-bs-target="#myModal" >v</button>
+                </td> 
+            </tr>
+            <tr>
+                <td>M005</td>
+                <td>19-05-2003</td>
+                <td>api</td>
+                <td>
+                    ani
+                </td>
+                <td>3</td>
+                <td align="right">300</td>
+                <td align="right">
+<button class="update1 btn btn-success"data-bs-toggle="modal" id="update1" data-bs-target="#myModal" >v</button>
+                </td> 
+            </tr>
+</tbody>
+<tfoot>
+<tr>
+	<td><label>Total : </label></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td align="right"><label id="total">0</label>
+</td>
+
+</tr>
+</tfoot>
+        </table>
+        </div>
+    </div>
+        </div>
+</div>
+<!-- Modal View -->
+<div
+	class="modal"
+	id="myModal"
+	data-bs-backdrop="static"
+	data-bs-keyboard="false"
+	tabindex="-1"
+	aria-labelledby="staticBackdropLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div
+				class="modal-header"
+				id="staticBackdropLabel">
+				<h1>Tambah Barang</h1>
+			</div>
+			<div class="modal-body">
+				<form
+					target="_blank"
+					method="post"
+					autocomplete="on">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label for="">Kode : P005</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label
+									for="tanggal"
+									class="form-label input-group"
+									>Tanggal : 1-1-2023
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label
+									for="supplier"
+									class="form-label input-group"
+									>Karyawan : Ani
+								</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="mb-3">
+								<label
+									for="kode"
+									class="form-label input-group"
+									>Konsumen : Ali
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<label
+							for="telpSupplier"
+							class="form-label input-group"
+							>Telepon : 0812318236
+						</label>
+					</div>
+					<div class="mb-3">
+						<label
+							for="alamatSupplier"
+							class="form-label input-group"
+							>Alamat : Jl. Dinamika 98 Sby
+						</label>
+					</div>
+					<div class="mb-3">
+						<label
+							for="telpSupplier"
+							class="form-label input-group"
+							>Keterangan : Kirim dengan Gojek
+						</label>
+					</div>
+					<div class="mb-3 col-md-6"></div>
+				</form>
+				<div>
+					<table
+						class="table table-hover"
+						id="myTable"
+						border="1">
+						<thead class="bg-gradient-success">
+							<tr>
+								<th class="text-gray-900">Kode</th>
+								<th class="text-gray-900">Nama</th>
+								<th class="text-gray-900">Satuan</th>
+								<th class="text-gray-900">Harga</th>
+								<th class="text-gray-900">Jumlah</th>
+								<th class="text-gray-900">Total</th>
+							</tr>
+						</thead>
+						<tbody id="tbody2">
+							<tr>
+								<td>A01</td>
+								<td>RAM</td>
+								<td>pcs</td>
+								<td>1000</td>
+								<td>100</td>
+								<td>100000</td>
+							</tr>
+							<tr>
+								<td>A02</td>
+								<td>CPU</td>
+								<td>pcs</td>
+								<td>2000</td>
+								<td>50</td>
+								<td>100000</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th
+									rowspan="1"
+									colspan="4">
+									Total <label id="total">
+										<span id="myTotal"></span>
+									</label>
+								</th>
+								<th
+									id="totalItem"
+									rowspan="1"
+									colspan="1">
+									Item  <label id="totalitem"></label>
+								</th>
+								<th
+									id="totalHarga"
+									rowspan="1"
+									colspan="1">
+									Total  <label id="totalharga"></label>
+								</th>
+								<th
+									rowspan="1"
+									colspan="1"></th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button
+					type="button"
+					class="btn btn-secondary"
+					id="dismissBtn"
+					data-bs-dismiss="modal">
+					Close
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+ <script>
+	$(document).ready(function(){
+$("#kodeb").change(function(){
+      console.log("hello");
+      if($("#kodeb").val()=="m001"){
+        $("#gol").val("processor")
+        $("#nama").val("intel");
+        $("#satuan").val("pcs");
+        $("#harga").val("200");
+      }else if($("#kodeb").val()=="m002"){
+        $("#gol").val("graphic card")
+        $("#nama").val("vga");
+        $("#satuan").val("pcs");
+        $("#harga").val("400");
+      }else if($("#kodeb").val()=="m003"){
+        $("#gol").val("memory")
+        $("#nama").val("ram");
+        $("#satuan").val("pcs");
+        $("#harga").val("300");
+      } 
+
+    });
+    $(".tambah").click(function(){
+        $("#ganti").load("tambahpermintaan2.html");
+    });
+    
+        total=0;
+		totalharga=0;
+		totalitem=0;
+		totalbarang=0;
+$('#tbody tr').each(function(){
+        var currentRow=$(this);
+        total=total + Number(currentRow.find("td:eq(5)").text());
+      });
+      $("#total").text(total);
+      console.log(total);
+      console.log("hello");
+$('#myTable tr').each(function(){
+        var currentRow=$(this);
+        totalharga=totalharga + Number(currentRow.find("td:eq(5)").text());
+      });
+      $("#totalharga").text(totalharga);
+ $('#myTable tr').each(function(){
+        var currentRow=$(this);
+        totalitem=totalitem + Number(currentRow.find("td:eq(4)").text());
+      });
+      $("#totalitem").text(totalitem);
+ totalbarang = $('#tbody2 tr').length;
+ console.log("Masuk sini");
+ console.log(totalbarang);
+
+ document.getElementById('myTotal').innerHTML = totalbarang;
+
+	//   $("myTotal").innerHtml(totalbarang);
+    });
+
+
+$(".tambah").click(function(){
+$("#save").show();
+console.log("hello");
+$("#update").hide();
+});
+$(".update1").click(function(){
+  $("#save").hide();
+	$("#update").show();
+});
+ </script>
+    <!-- bootstrap core javascript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- core plugin javascript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- page level plugins -->
+    <script src="vendor/datatables/jquery.datatables.min.js"></script>
+    <script src="vendor/datatables/datatables.bootstrap4.min.js"></script>
+
+    <!-- page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+
+    </body>
+</html>
